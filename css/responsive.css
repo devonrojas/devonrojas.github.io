@@ -73,7 +73,7 @@
     padding: 60px 10px;
   }
 
-  .main-menu {
+  .main-menu a {
     font-size: 1rem;
   }
 
@@ -90,9 +90,7 @@
   .main-menu__button:after {
     display: none;
   }
-  .first-level .logo {
-    display: none;
-  }
+
   .second-level__block {
     z-index: 9999;
   }
