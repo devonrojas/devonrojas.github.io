@@ -73,6 +73,10 @@
     padding: 60px 10px;
   }
 
+  .main-menu {
+    font-size: 1rem;
+  }
+
   .main-menu .bottom-contain {
     bottom: 30px;
   }
