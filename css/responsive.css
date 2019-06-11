@@ -119,6 +119,16 @@
     padding-left: 25px;
   }
 
+  .timeline .timeline-year {
+    margin-left: -5px;
+    top: 60px;
+  }
+
+  .timeline .timeline-year p {
+    display: block;
+    width: 105%;
+  }
+
   .timeline .timeline-event.left,
   .timeline .timeline-event.right {
     padding: 0;
