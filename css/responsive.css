@@ -1,0 +1,227 @@
+@media screen and (max-width: 600px) {
+  h1[class] {
+    font-size: 5rem;
+  }
+
+  .content-w-sidebar--inner {
+    padding-top: 50px;
+  }
+
+  .hero-wrapper .hero-left-text {
+    left: 30px;
+    right: 30px;
+  }
+
+  .hidden-sm {
+    display: none;
+  }
+
+  .grid.col-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .home-infographics .grid.col-2 .item {
+    padding: 90px 0 45px;
+  }
+
+  .home-infographics .grid.col-2 .item.xl p.stat {
+    font-size: 6.5rem;
+  }
+
+  .home-infographics .stripes {
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .home-infographics .stripes-left,
+  .home-infographics .stripes-middle,
+  .home-infographics .stripes-right {
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+  }
+
+  .infographic blockquote .context {
+    transform: none;
+  }
+
+  .infographic blockquote {
+    margin: 10px 0;
+  }
+
+  .drop-quote p::after {
+    top: 80%;
+  }
+
+  .portrait {
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
+
+  .program-img[class] {
+    float: none;
+    display: block;
+    margin: 10px 0 !important;
+  }
+
+  .first-level {
+    width: 80vw;
+    left: -80vw;
+    overflow: scroll;
+    padding: 60px 10px;
+  }
+
+  .main-menu .bottom-contain {
+    bottom: 30px;
+  }
+  .main-menu .bottom-contain .menu:before {
+    width: 90%;
+    left: 5%;
+  }
+  .main-menu.show-first .main-menu__button {
+    left: 0;
+  }
+  .main-menu__button:after {
+    display: none;
+  }
+  .first-level .logo {
+    display: none;
+  }
+  .second-level__block {
+    z-index: 9999;
+  }
+
+  .mobile-logo-bar {
+    display: block;
+    position: fixed;
+    background-color: black;
+    background-image: url("../assets/mesaCollege_white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    height: 60px;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .grid.team {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline .stripes {
+    left: 0;
+  }
+
+  .timeline {
+    padding: 50px 0;
+    padding-left: 25px;
+  }
+
+  .timeline .timeline-event.left,
+  .timeline .timeline-event.right {
+    padding: 0;
+  }
+
+  .timeline .timeline-event.left::after,
+  .timeline .timeline-event.right::after {
+    left: -39px;
+    transform: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding-top: 0;
+  }
+  .content-w-sidebar {
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    float: left;
+    transform: none;
+  }
+  .sidebar section {
+    display: none;
+  }
+  .sidebar--nav {
+    background-color: #111111;
+    padding-bottom: 20px;
+  }
+  .sidebar--nav > ul > li {
+    display: none;
+  }
+  .sidebar--nav .top-level {
+    display: none;
+  }
+
+  .sidebar--nav > ul > li.current-page-item {
+    display: block;
+  }
+
+  .hero-wrapper::after {
+    box-shadow: inset 1px 1px 100px black;
+  }
+
+  .sidebar--mobile {
+    display: block;
+  }
+
+  .sidebar--mobile a {
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .site-footer .container {
+    text-align: center !important;
+  }
+
+  .site-footer div:first-child > a {
+    display: block;
+  }
+
+  .site-footer .grid.col-3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .copyright {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .grid.team {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .grid.team {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
