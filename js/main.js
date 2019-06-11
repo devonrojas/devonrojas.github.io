@@ -1,4 +1,27 @@
 (function() {
+  document.querySelectorAll(".nav--top-level > li > a").forEach(el => {
+    el.addEventListener("click", e => {
+      console.log("click");
+      e.preventDefault();
+      let page_id = e.target.id;
+      let section = document.getElementById("sub_" + page_id);
+      if (section) {
+        Array.from(section.parentNode.children).forEach(node => {
+          if (node != section) {
+            node.classList.remove("open");
+          }
+        });
+        section.classList.toggle("open");
+      }
+    });
+  });
+
+  document.querySelectorAll(".back-button").forEach(el => {
+    el.addEventListener("click", e => {
+      e.target.parentNode.classList.remove("open");
+    });
+  });
+
   document.querySelector(".main-menu-button").addEventListener("click", e => {
     document.querySelector(".main-menu").classList.add("show-first");
   });

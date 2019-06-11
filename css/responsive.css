@@ -87,12 +87,39 @@
   .main-menu.show-first .main-menu__button {
     left: 0;
   }
+  .main-menu.show-first .second-level__section {
+    width: 80vw;
+    left: -80vw;
+    padding-top: 80px;
+  }
+  .main-menu.show-first .second-level__section.open {
+    left: 0;
+  }
   .main-menu__button:after {
     display: none;
   }
 
-  .second-level__block {
+  .second-level__section {
     z-index: 9999;
+  }
+
+  .second-level img {
+    display: none;
+  }
+
+  .main-menu.show-first .second-level__section .back-button {
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: #222;
+    padding: 20px 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    display: block;
   }
 
   .mobile-logo-bar {
