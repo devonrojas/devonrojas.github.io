@@ -30,8 +30,9 @@
   document.querySelector(".close-menu").addEventListener("click", e => {
     document.querySelector(".main-menu").classList.remove("show-first");
   });
-
-  document.documentElement.addEventListener("click", function(e) {
+  
+  const doc = document.documentElement || document.body;
+  doc.addEventListener("click", function(e) {
     if (
       !document.querySelector(".main-menu").contains(e.target) &&
       !document.querySelector(".first-level").contains(e.target) &&
