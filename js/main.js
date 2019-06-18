@@ -1,17 +1,18 @@
 (function() {
   document.querySelectorAll(".nav--top-level > li > a").forEach(el => {
     el.addEventListener("click", e => {
-      console.log("click");
-      e.preventDefault();
       let page_id = e.target.id;
-      let section = document.getElementById("sub_" + page_id);
-      if (section) {
-        Array.from(section.parentNode.children).forEach(node => {
-          if (node != section) {
-            node.classList.remove("open");
-          }
-        });
-        section.classList.toggle("open");
+      if (page_id != "home") {
+        e.preventDefault();
+        let section = document.getElementById("sub_" + page_id);
+        if (section) {
+          Array.from(section.parentNode.children).forEach(node => {
+            if (node != section) {
+              node.classList.remove("open");
+            }
+          });
+          section.classList.toggle("open");
+        }
       }
     });
   });
@@ -28,6 +29,16 @@
 
   document.querySelector(".close-menu").addEventListener("click", e => {
     document.querySelector(".main-menu").classList.remove("show-first");
+  });
+
+  document.documentElement.addEventListener("click", function(e) {
+    if (
+      !document.querySelector(".main-menu").contains(e.target) &&
+      !document.querySelector(".first-level").contains(e.target) &&
+      !document.querySelector(".second-level").contains(e.target)
+    ) {
+      document.querySelector(".main-menu").classList.remove("show-first");
+    }
   });
 
   let btn = document.querySelector(".translate-button");
@@ -119,7 +130,6 @@ const scrollTo = function(to, duration) {
 };
 
 const countUp = function(to, el, duration) {
-  console.log(to);
   const startDate = +new Date(),
     start = 0,
     change = to,

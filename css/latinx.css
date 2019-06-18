@@ -1,0 +1,182 @@
+.search {
+  width: 100%;
+  border: 2px solid #023867;
+  margin: 0.2rem 0.2rem 0.4rem;
+  margin-left: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.filters label.active:nth-of-type(4n) {
+  background: #fcb424;
+}
+.filters label.active:nth-of-type(4n + 1) {
+  background: #2253a3;
+}
+.filters label.active:nth-of-type(4n + 2) {
+  background: #f37725;
+}
+.filters label.active:nth-of-type(4n + 3) {
+  background: #699446;
+}
+
+.btn:hover {
+  color: white !important;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.filters input[type="checkbox"] {
+  display: none !important;
+}
+
+.filters label {
+  margin: 0.2rem 0.4rem;
+  margin-left: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: calc(100% - 0.2vw);
+  letter-spacing: 0.5px;
+}
+
+.figures-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.125rem;
+  padding-top: 1rem;
+}
+
+.figure {
+  float: none;
+  word-wrap: break-word;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 1.2rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  min-width: 0;
+}
+
+.figure:nth-of-type(4n):hover .figure-title {
+  color: #fcb424;
+}
+.figure:nth-of-type(4n + 1):hover .figure-title {
+  color: #2253a3;
+}
+.figure:nth-of-type(4n + 2):hover .figure-title {
+  color: #ff9341;
+}
+.figure:nth-of-type(4n + 3):hover .figure-title {
+  color: #a4d07e;
+}
+
+.figure-img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.figure-img {
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 10%;
+  width: 100%;
+  margin: 0 !important;
+}
+
+.figure-title {
+  font-family: "Bitter";
+  font-size: calc(100%);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: black;
+  position: relative;
+  display: block;
+  transition: color 0.3s ease;
+  margin: 0.5rem 1rem 0;
+}
+
+.figure-category-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  position: relative;
+  margin: 0.5rem;
+  color: black;
+}
+
+.figure-category {
+  display: inline-block;
+  background: #f0f0f0;
+  text-transform: uppercase;
+  font-size: calc(60%);
+  font-weight: bold;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  margin: 0.3rem;
+  letter-spacing: 0px;
+}
+
+.bio-wrapper img {
+  display: block;
+  float: right;
+  margin: 0 0 50px 10px;
+  max-width: 250px;
+}
+
+.bio-wrapper {
+  padding: 1rem 0;
+}
+
+.pagination {
+  clear: right;
+}
+
+.pagination a {
+  padding: 5px 10px;
+  color: black;
+  display: initial;
+}
+
+#categories {
+  margin-left: -0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.figure-category {
+  background: #f0f0f0;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  margin: 0.3rem;
+}
+
+.figure-name h2 {
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  font-family: "Bitter";
+}
+
+a.figure-name {
+  color: black;
+  display: inline-block;
+}
+
+a.figure-name:hover h2 {
+  color: #fdb930;
+}

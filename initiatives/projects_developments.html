@@ -60,7 +60,7 @@
             </a>
             <ul class="nav--top-level" id="main-menu">
               <li>
-                <a href="/" class="active">Home</a>
+                <a href="/" id="home">Home</a>
               </li>
               <li>
                 <a href="/student-impact/" id="1">
@@ -68,7 +68,7 @@
                 </a>
               </li>
               <li>
-                <a href="/initiatives/" id="2">Initiatives</a>
+                <a href="/initiatives/" id="2" class="active">Initiatives</a>
               </li>
               <li>
                 <a href="/latinx/" id="3">Latinx Alliance</a>
@@ -141,8 +141,13 @@
               <img src="/assets/landing_page_bg.jpg" alt="" />
               <div class="top-level">Latinx Alliance</div>
               <ul>
-                <li><a href="/latinx/">Welcome</a></li>
-                <li><a href="#">Campus Conexiones</a></li>
+                <li>
+                  <a href="/latinx/">Welcome</a>
+                </li>
+                <li><a href="/latinx/events.html">Events</a></li>
+                <li>
+                  <a href="/latinx/important-figures.html">Important Figures</a>
+                </li>
                 <li><a href="#">Latinx Heritage Month</a></li>
                 <li><a href="#">RAZA Grad</a></li>
               </ul>
@@ -338,57 +343,95 @@
               <div class="content-w-sidebar--inner">
                 <article class="post">
                   <div class="entry">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Rhoncus aenean vel elit scelerisque mauris. Dictum
-                      varius duis at consectetur lorem. Montes nascetur
-                      ridiculus mus mauris vitae ultricies leo integer. Et
-                      malesuada fames ac turpis egestas integer eget aliquet
-                      nibh. Pellentesque habitant morbi tristique senectus et
-                      netus. Eget egestas purus viverra accumsan. Volutpat ac
-                      tincidunt vitae semper quis lectus nulla at. Sit amet est
-                      placerat in egestas erat imperdiet. Accumsan in nisl nisi
-                      scelerisque eu ultrices vitae. Est sit amet facilisis
-                      magna etiam tempor. Consectetur adipiscing elit
-                      pellentesque habitant. Pellentesque habitant morbi
-                      tristique senectus et netus et. Convallis posuere morbi
-                      leo urna molestie. Dolor magna eget est lorem ipsum dolor
-                      sit amet consectetur. Nisi est sit amet facilisis magna.
-                      Tristique nulla aliquet enim tortor at auctor urna nunc.
+                    <p class="intro">
+                      {{ Introduction here }}
                     </p>
+                    <div class="title">
+                      <div>Equity</div>
+                    </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Rhoncus aenean vel elit scelerisque mauris. Dictum
-                      varius duis at consectetur lorem. Montes nascetur
-                      ridiculus mus mauris vitae ultricies leo integer. Et
-                      malesuada fames ac turpis egestas integer eget aliquet
-                      nibh. Pellentesque habitant morbi tristique senectus et
-                      netus. Eget egestas purus viverra accumsan. Volutpat ac
-                      tincidunt vitae semper quis lectus nulla at. Sit amet est
-                      placerat in egestas erat imperdiet. Accumsan in nisl nisi
-                      scelerisque eu ultrices vitae. Est sit amet facilisis
-                      magna etiam tempor. Consectetur adipiscing elit
-                      pellentesque habitant. Pellentesque habitant morbi
-                      tristique senectus et netus et. Convallis posuere morbi
-                      leo urna molestie. Dolor magna eget est lorem ipsum dolor
-                      sit amet consectetur. Nisi est sit amet facilisis magna.
-                      Tristique nulla aliquet enim tortor at auctor urna nunc.
+                      At Mesa, equity is a student-centered approach to
+                      fostering a culture of success for historically
+                      marginalized students. In our roles as faculty members,
+                      student services practitioners, staff, and administrators,
+                      we pursue equity through principles of inquiry and
+                      data-informed decision making. We will achieve equity when
+                      we see parity in outcomes across racial/ethnic groups and
+                      all disproportionately impacted groups within higher
+                      education. We work within integrated and equity-minded
+                      systems to ensure that everyone has what they need to
+                      succeed during their time at Mesa College.
                     </p>
+                    <div class="title">
+                      <div>Accreditation</div>
+                    </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Rhoncus aenean vel elit scelerisque mauris. Dictum
-                      varius duis at consectetur lorem. Montes nascetur
-                      ridiculus mus mauris vitae ultricies leo integer. Et
-                      malesuada fames ac turpis egestas integer eget aliquet
-                      nibh. Pellentesque habitant morbi tristique senectus et
-                      netus. Eget egestas purus viverra accumsan. Volutpat ac
-                      tincidunt vitae semper quis lectus nulla at. Sit amet est
-                      placerat in egestas erat imperdiet.
+                      Following our most recent ACCJC team visit in 2017, Mesa's
+                      accreditation has been reaffirmed through 2024. During the
+                      reaffirmation process, the College received commendations
+                      for the following. Equity Diversity Our committed tutoring
+                      services, employees, and collaborative team-oriented
+                      environments Our commitment to the ongoing professional
+                      learning of all employees Our leadership for instilling a
+                      student-centered culture across the campus Our
+                      student-centered approaches utilizing technology resources
+                      Our development of operational data reports and survey
+                      results that facilitate data-informed dialogue and
+                      decision-making.
+
+                      {{ Include Program Review }}
                     </p>
-                    <div class="next">
+                    <div class="title">
+                      <div>Master Planning</div>
+                    </div>
+                    <p>
+                      The Educational Master Plan Steering Committee will guide
+                      the review and college-wide vetting of the plan, to
+                      include the analysis of data and discussion of key
+                      findings and recommendations. The recommendations will be
+                      presented to the Planning and Institutional Effectiveness
+                      Committee, and ultimately submitted to President's
+                      Cabinet.
+                    </p>
+                    <div class="title">
+                      <div>STEM Community Scholars</div>
+                    </div>
+                    <p>
+                      In 2018, Mesa College offered 13 stipends of $5,000 to
+                      Mesa students majoring or interested in STEM, in addition
+                      to offering all-expense paid STEM career field trips for
+                      35 students. The San Diego Mesa College STEM Community
+                      Scholars Program was designed to increase the number of
+                      students pursuing careers in science, technology,
+                      engineering, and math. This was achieved by providing
+                      financial aid, guiding students to support services,
+                      establishing connections with the STEM workforce, and
+                      fostering a community of STEM scholars. Through this
+                      intitative, students attended field trips to the Tijuana
+                      River Estuary, Cleveland National Forest, HTCC Conference,
+                      Solar Turbines, and more.
+                    </p>
+                    <div class="title">
+                      <div>AB 705</div>
+                    </div>
+                    <p>
+                      AB 705 was written to clarify existing regulation and
+                      ensure that students are not placed into remedial courses
+                      that may delay or deter their educational progress unless
+                      evidence suggests they are highly unlikely to succeed in
+                      the college-level course. Assessment instruments and
+                      placement policies have serious implications for equity,
+                      as students of color are far more likely to be placed into
+                      remedial courses; students placed into remediation are
+                      much less likely to reach their educational goals.<br />
+
+                      Implemented at Mesa College: Assessment & Placement.<br />
+                      Curricular - <br />
+                      English: Student minimum placement level - ENGL 101X.<br />
+                      Math: MATH 104X - Trig, MATH 116X - College Algebra, MATH
+                      118X - Liberal Arts Math, MATH 119X - Statistics
+                    </p>
+                    <div class="hidden-sm hidden-xs">
                       <a href="#" class="button button-primary"
                         >Our HSI History</a
                       >
@@ -398,20 +441,13 @@
                 <div class="sidebar--mobile">
                   <section>
                     <div class="sidebar-title">
-                      <div>Title Here</div>
+                      <div>Read More</div>
                     </div>
                     <div class="grid col-2">
-                      <a href="#">
-                        <div class="teaser teaser--image teaser--sidebar">
+                      <a href="/initiatives/history.html">
+                        <div class="teaser teaser--image teaser--sidebar" style="background-image: url(/assets/campus_1.jpg)">
                           <div class="teaser--image-text">
-                            Image Title Here
-                          </div>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="teaser teaser--image teaser--sidebar">
-                          <div class="teaser--image-text">
-                            Image Title Here
+                            Our HSI History
                           </div>
                         </div>
                       </a>

@@ -22,9 +22,8 @@
 
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
-    <title>
-      San Diego Mesa College - Hispanic-Serving Institution - Student Impact
-    </title>
+    <link rel="stylesheet" href="/css/latinx.css" />
+    <title>San Diego Mesa College - Hispanic-Serving Institution</title>
   </head>
   <body>
     <div id="page-wrap">
@@ -65,7 +64,7 @@
                 <a href="/" id="home">Home</a>
               </li>
               <li>
-                <a href="/student-impact/" id="1" class="active">
+                <a href="/student-impact/" id="1">
                   Student Impact
                 </a>
               </li>
@@ -73,7 +72,7 @@
                 <a href="/initiatives/" id="2">Initiatives</a>
               </li>
               <li>
-                <a href="/latinx/" id="3">Latinx Alliance</a>
+                <a href="/latinx/" id="3" class="active">Latinx Alliance</a>
               </li>
               <li>
                 <a href="/strategic-plan/" id="4">Strategic Plan</a>
@@ -106,7 +105,7 @@
             </div>
           </div>
           <div class="second-level">
-            <div class="second-level__section open" id="sub_1">
+            <div class="second-level__section" id="sub_1">
               <div class="back-button">Back</div>
               <img src="/assets/landing_page_bg.jpg" alt="" />
               <div class="top-level">Student Impact</div>
@@ -118,7 +117,7 @@
                   >
                 </li>
                 <li><a href="/student-impact/centers.html">Centers</a></li>
-                <li class="current-page-item">
+                <li>
                   <a href="/student-impact/spotlights.html"
                     >Student Spotlights</a
                   >
@@ -138,7 +137,7 @@
                 <li><a href="/initiatives/history.html">Our History</a></li>
               </ul>
             </div>
-            <div class="second-level__section" id="sub_3">
+            <div class="second-level__section open" id="sub_3">
               <div class="back-button">Back</div>
               <img src="/assets/landing_page_bg.jpg" alt="" />
               <div class="top-level">Latinx Alliance</div>
@@ -147,7 +146,7 @@
                   <a href="/latinx/">Welcome</a>
                 </li>
                 <li><a href="/latinx/events.html">Events</a></li>
-                <li>
+                <li class="current-page-item">
                   <a href="/latinx/important-figures.html">Important Figures</a>
                 </li>
                 <li><a href="#">Latinx Heritage Month</a></li>
@@ -186,7 +185,7 @@
         <!-- Change hero image here -->
         <div
           class="hero-wrapper"
-          style="background-image: url(/assets/spotlight_bg_2.jpg)"
+          style="background-image: url(/assets/about_bg.jpg); background-position-y: 50%;"
         >
           <div class="hero-right-text">
             <a href="/student-impact/programs.html">
@@ -210,10 +209,19 @@
           </div>
           <div class="hero-left-text">
             <h1>
-              Student Spotlights
+              Latinx Alliance
             </h1>
             <p class="intro">
-              See how HSI has transformed students' lives at Mesa.
+              <span class="english">
+                Created to share resources, connect, network and partner with
+                Latinx and others, we strive to celebrate Latinx success and
+                culture at Mesa.
+              </span>
+              <span class="spanish hidden">
+                Creado para compartir recursos, conectarse, conectarse en red y
+                asociarse con Latinx y otros, nos esforzamos por celebrar el
+                éxito de Latinx y cultura en Mesa.
+              </span>
             </p>
           </div>
           <div class="hero-bottom-text"></div>
@@ -238,10 +246,10 @@
                           <a href="../">Home</a>
                           &nbsp;>&nbsp;
                           <span>
-                            <a href="./">Student Impact</a>
+                            <a href="./">Latinx Alliance</a>
                             &nbsp;>&nbsp;
-                            <span class="breadcrumb-last">
-                              <a href="#">Student Spotlights</a>
+                            <span>
+                              <a href="#">Important Figures</a>
                             </span>
                           </span>
                         </span>
@@ -249,21 +257,28 @@
                     </span>
                   </p>
                 </div>
-                <div class="top-level">Student Impact</div>
+                <div class="top-level">Latinx Alliance</div>
                 <ul>
-                  <li class="page-item">
-                    <a href="./programs.html">Programs</a>
-                    <ul class="children">
-                      <li class="page-item">
-                        <a href="">Mathletics</a>
-                      </li>
-                    </ul>
+                  <li>
+                    <a href="./">Overview</a>
                   </li>
-                  <li class="page-item">
-                    <a href="./centers.html">Centers</a>
+                  <li>
+                    <a href="/latinx/events.html">Events</a>
                   </li>
-                  <li class="page-item current-page-item">
-                    <a href="./spotlights.html">Student Spotlights</a>
+                  <li>
+                    <a href="/latinx/roster.html">Membership Roster</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.emailmeform.com/builder/form/xc2hs4wKaS8peP22T9YJdXI"
+                      target="blank"
+                      >Become a Member</a
+                    >
+                  </li>
+                  <li class="current-page-item">
+                    <a href="/latinx/important-figures.html"
+                      >Important Figures</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -343,100 +358,34 @@
               <div class="content-w-sidebar--inner">
                 <article class="post">
                   <div class="entry">
-                    <div class="title xl-title">
-                      <div>
-                        Defining Excellence
-                      </div>
-                    </div>
-                    <aside class="drop-quote">
-                      <blockquote>
-                        <p class="text-center">
-                          HSI at Mesa provided me a scholarly and professional
-                          environment in which I was able to thrive.
-                        </p>
-                      </blockquote>
-                    </aside>
-                    <div class="portrait">
-                      <img
-                        src="/assets/student-spotlights/serah.jpg"
-                        alt="Student Spotlight"
-                        class="portrait-img"
-                      />
-                      <div class="portrait-text">
-                        <span>Serah W.</span>
-                        <cite
-                          >Biology Major<br />Columbia University<br />Class of
-                          2021</cite
-                        >
-                      </div>
-                    </div>
-                    <p class="intro">Meet Serah W.</p>
+                    <!-- Important Figures Elements -->
                     <p>
-                      "During my two years at Mesa College, the HSI/STEM
-                      Conexiones services have greatly impacted my experience as
-                      both a student and employee. I have had the opportunity to
-                      utilize the STEM Center for its GIS software, collection
-                      of textbooks, tutoring, drop-in counseling, and
-                      comfortable study space. I participated in STEM Core,
-                      where I fast-tracked my path to Calculus while developing
-                      professional skills within my cohort. Additionally, I have
-                      had the pleasure of being employed under the Title
-                      III/STEM team, as a tutor and administrative staff member.
-                      I have worked as a tutor within the Classroom Tutoring
-                      program and at special events like Mathletics. Working
-                      with my fellow students has fostered my connection to the
-                      learning community on campus and allowed me to give back
-                      to a program that has aided my development. Thanks in part
-                      to the support I received through these programs and their
-                      staff, I will be transferring to Columbia University in
-                      Fall 2019."
+                      <a
+                        href="/latinx/important-figures.html"
+                        style="color: black;"
+                        >Back to home page</a
+                      >
                     </p>
-                    <div
-                      class="title xl-title"
-                      style="clear: both; padding-top: 50px;"
-                    >
-                      <div>
-                        Breaking Barriers
-                      </div>
+                    <div class="bio-wrapper">
+                      <div id="bio"></div>
                     </div>
-                    <aside class="drop-quote">
-                      <blockquote>
-                        <p class="text-center">
-                          HSI at Mesa provided me a scholarly and professional
-                          environment in which I was able to thrive.
-                        </p>
-                      </blockquote>
-                    </aside>
-                    <div class="portrait">
-                      <img
-                        src="/assets/student-spotlights/naylynn.jpg"
-                        alt="Student Spotlight"
-                        class="portrait-img"
-                      />
-                      <div class="portrait-text">
-                        <span>Naylynn T.</span>
-                        <cite
-                          >Astrophysics Major<br />San Diego State University<br />Class
-                          of 2021</cite
+                    <p class="pagination">
+                      <span class="paginate prev button">
+                        <a
+                          id="prevBtn"
+                          href="http://www.sdmesa.edu/academics/stem/stem-center.shtml"
+                          >Previous</a
                         >
-                      </div>
-                    </div>
-                    <p class="intro">Meet Naylynn T.</p>
-                    <p>
-                      tortor at risus viverra adipiscing at in tellus integer
-                      feugiat scelerisque varius morbi enim nunc faucibus a
-                      pellentesque sit amet porttitor eget dolor morbi non arcu
-                      risus quis varius quam quisque id diam vel quam elementum
-                      pulvinar etiam non quam lacus suspendisse faucibus
-                      interdum posuere lorem ipsum dolor sit amet consectetur
-                      adipiscing elit duis tristique sollicitudin nibh sit amet
-                      commodo nulla facilisi nullam vehicula ipsum a arcu cursus
-                      vitae congue mauris rhoncus aenean vel elit scelerisque
-                      mauris pellentesque pulvinar pellentesque habitant morbi
-                      tristique senectus et netus et malesuada fames ac turpis
-                      egestas maecenas pharetra convallis posuere morbi leo urna
-                      molestie
+                      </span>
+                      <span class="paginate next button">
+                        <a
+                          id="nextBtn"
+                          href="http://www.sdmesa.edu/academics/stem/stem-center.shtml"
+                          >Next</a
+                        >
+                      </span>
                     </p>
+                    <!-- -->
                   </div>
                 </article>
               </div>
@@ -450,13 +399,13 @@
                 <div>
                   <a href="https://www.sdmesa.edu" target="blank">
                     <img
-                      src="../assets/mesaCollege_white.png"
+                      src="/assets/mesaCollege_white.png"
                       alt="San Diego Mesa College Logo"
                       style="width: 200px"
                   /></a>
                   <a href="#" target="blank">
                     <img
-                      src="../assets/HSI Logo_BW.png"
+                      src="/assets/HSI Logo_BW.png"
                       alt="San Diego Mesa College Hispanic-Serving Insitution Logo"
                       style="width: 200px; margin: 50px 0;"
                     />
@@ -538,19 +487,19 @@
                   <h2>Quick Links</h2>
                   <ul>
                     <li>
-                      <a href="#">Student Impact</a>
+                      <a href="/student-impact/">Student Impact</a>
                     </li>
                     <li>
-                      <a href="#">Projects & Developments</a>
+                      <a href="/initiatives/">Projects & Developments</a>
                     </li>
                     <li>
-                      <a href="#">Latinx Alliance</a>
+                      <a href="/latinx/">Latinx Alliance</a>
                     </li>
                     <li>
-                      <a href="#">Strategic Plan</a>
+                      <a href="/strategic-plan/">Strategic Plan</a>
                     </li>
                     <li>
-                      <a href="#">What is HSI?</a>
+                      <a href="/about/">What is HSI?</a>
                     </li>
                     <li style="color: white">
                       <a href="#" style="color: white"
@@ -568,6 +517,15 @@
         </footer>
       </div>
     </div>
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/latinx/latinx.js"></script>
+    <script src="/js/latinx/bio.js"></script>
+    <script>
+      (function() {
+        document.documentElement.scrollTop = document.getElementById(
+          "content"
+        ).offsetTop;
+      })();
+    </script>
   </body>
 </html>

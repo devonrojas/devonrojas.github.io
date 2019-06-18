@@ -60,7 +60,7 @@
             </a>
             <ul class="nav--top-level" id="main-menu">
               <li>
-                <a href="/" class="active">Home</a>
+                <a href="/" id="home">Home</a>
               </li>
               <li>
                 <a href="/student-impact/" id="1">
@@ -68,7 +68,7 @@
                 </a>
               </li>
               <li>
-                <a href="/initiatives/" id="2">Initiatives</a>
+                <a href="/initiatives/" id="2" class="active">Initiatives</a>
               </li>
               <li>
                 <a href="/latinx/" id="3">Latinx Alliance</a>
@@ -133,7 +133,9 @@
                     >Projects & Developments</a
                   >
                 </li>
-                <li class="current-page-item"><a href="/initiatives/history.html">Our History</a></li>
+                <li class="current-page-item">
+                  <a href="/initiatives/history.html">Our History</a>
+                </li>
               </ul>
             </div>
             <div class="second-level__section" id="sub_3">
@@ -141,8 +143,13 @@
               <img src="/assets/landing_page_bg.jpg" alt="" />
               <div class="top-level">Latinx Alliance</div>
               <ul>
-                <li><a href="/latinx/">Welcome</a></li>
-                <li><a href="#">Campus Conexiones</a></li>
+                <li>
+                  <a href="/latinx/">Welcome</a>
+                </li>
+                <li><a href="/latinx/events.html">Events</a></li>
+                <li>
+                  <a href="/latinx/important-figures.html">Important Figures</a>
+                </li>
                 <li><a href="#">Latinx Heritage Month</a></li>
                 <li><a href="#">RAZA Grad</a></li>
               </ul>
@@ -822,29 +829,6 @@
                     </div>
                   </div>
                 </article>
-                <div class="sidebar--mobile">
-                  <section>
-                    <div class="sidebar-title">
-                      <div>Title Here</div>
-                    </div>
-                    <div class="grid col-2">
-                      <a href="#">
-                        <div class="teaser teaser--image teaser--sidebar">
-                          <div class="teaser--image-text">
-                            Image Title Here
-                          </div>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="teaser teaser--image teaser--sidebar">
-                          <div class="teaser--image-text">
-                            Image Title Here
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </section>
-                </div>
               </div>
             </div>
           </div>
@@ -982,16 +966,21 @@
           .addEventListener("click", function(e) {
             scrollTo(document.querySelector(".main-content").offsetTop, 2000);
           });
-
-        window.addEventListener("scroll", function() {
-          let scroll =
-            document.documentElement.scrollTop || document.body.scrollTop;
-          let arr = Array.from(
-            document.querySelectorAll(".timeline-year")
-          ).reverse();
-          let hash = arr.find(el => el.offsetTop - scroll < -1000);
-          hash ? (window.location.hash = hash.id) : null;
-        });
+        if (
+          !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          window.addEventListener("scroll", function() {
+            let scroll =
+              document.documentElement.scrollTop || document.body.scrollTop;
+            let arr = Array.from(
+              document.querySelectorAll(".timeline-year")
+            ).reverse();
+            let hash = arr.find(el => el.offsetTop - scroll < -1000);
+            hash ? (window.location.hash = hash.id) : null;
+          });
+        }
       })();
     </script>
   </body>

@@ -60,7 +60,7 @@
             </a>
             <ul class="nav--top-level" id="main-menu">
               <li>
-                <a href="/" class="active">Home</a>
+                <a href="/" id="home">Home</a>
               </li>
               <li>
                 <a href="/student-impact/" id="1">
@@ -77,7 +77,7 @@
                 <a href="/strategic-plan/" id="4">Strategic Plan</a>
               </li>
               <li>
-                <a href="/about/" id="5">What is HSI?</a>
+                <a href="/about/" id="5" class="active">What is HSI?</a>
               </li>
             </ul>
             <div class="bottom-container">
@@ -141,11 +141,16 @@
               <img src="/assets/landing_page_bg.jpg" alt="" />
               <div class="top-level">Latinx Alliance</div>
               <ul>
-                <li><a href="/latinx/">Welcome</a></li>
-                <li><a href="#">Campus Conexiones</a></li>
-                <li><a href="#">Latinx Heritage Month</a></li>
-                <li><a href="#">RAZA Grad</a></li>
-              </ul>
+                  <li>
+                    <a href="/latinx/">Welcome</a>
+                  </li>
+                  <li><a href="/latinx/events.html">Events</a></li>
+                  <li>
+                    <a href="/latinx/important-figures.html">Important Figures</a>
+                  </li>
+                  <li><a href="#">Latinx Heritage Month</a></li>
+                  <li><a href="#">RAZA Grad</a></li>
+                </ul>
             </div>
             <div class="second-level__section" id="sub_4">
               <div class="back-button">Back</div>
@@ -568,42 +573,6 @@
                             <p>
                               <a href="mailto:bmackus@sdccd.edu"
                                 >bmackus@sdccd.edu</a
-                              >
-                            </p>
-                            <p class="contact-type">
-                              <i class="fas fa-phone"></i>Phone:
-                            </p>
-                            <p>(619) 388-2873</p>
-                            <p class="contact-type">
-                              <i class="fas fa-location-arrow"></i>Room:
-                            </p>
-                            <p>G-201</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="team-member">
-                        <div class="team-member-content">
-                          <div class="team-member-info">
-                            <span>Kelly Spoon</span>
-                            <cite>STEM Professional Learning Coordinator</cite>
-                          </div>
-                        </div>
-                        <div
-                          style="overflow: hidden; height: 100%; width: 100%; position: absolute;"
-                        >
-                          <div class="team-member-img">
-                            <img
-                              src="/assets/team/Kelly_Spoon_new_faculty_2016_095copy.jpg"
-                              alt="Member test"
-                            />
-                          </div>
-                          <div class="team-member-contact">
-                            <p class="contact-type">
-                              <i class="fas fa-envelope"></i>Email:
-                            </p>
-                            <p>
-                              <a href="mailto:kspoon@sdccd.edu"
-                                >kspoon@sdccd.edu</a
                               >
                             </p>
                             <p class="contact-type">
@@ -1098,31 +1067,16 @@
                         </div>
                       </div>
                     </div>
+                    <div class="text-center" style="margin-top: 2rem;">
+                        <div
+                          class="button button-primary button--arrow-up"
+                          id="back_to_top"
+                        >
+                          Back to Top
+                        </div>
+                      </div>
                   </div>
                 </article>
-                <div class="sidebar--mobile">
-                  <section>
-                    <div class="sidebar-title">
-                      <div>Title Here</div>
-                    </div>
-                    <div class="grid col-2">
-                      <a href="#">
-                        <div class="teaser teaser--image teaser--sidebar">
-                          <div class="teaser--image-text">
-                            Image Title Here
-                          </div>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="teaser teaser--image teaser--sidebar">
-                          <div class="teaser--image-text">
-                            Image Title Here
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </section>
-                </div>
               </div>
             </div>
           </div>
@@ -1253,5 +1207,14 @@
       </div>
     </div>
     <script src="/js/main.js"></script>
+    <script>
+        (function() {
+          document
+            .getElementById("back_to_top")
+            .addEventListener("click", function(e) {
+              scrollTo(document.querySelector(".main-content").offsetTop, 2000);
+            });
+        })();
+      </script>
   </body>
 </html>

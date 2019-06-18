@@ -60,7 +60,7 @@
             </a>
             <ul class="nav--top-level" id="main-menu">
               <li>
-                <a href="/" class="active">Home</a>
+                <a href="/" id="home">Home</a>
               </li>
               <li>
                 <a href="/student-impact/" id="1">
@@ -74,7 +74,9 @@
                 <a href="/latinx/" id="3">Latinx Alliance</a>
               </li>
               <li>
-                <a href="/strategic-plan/" id="4">Strategic Plan</a>
+                <a href="/strategic-plan/" id="4" class="active"
+                  >Strategic Plan</a
+                >
               </li>
               <li>
                 <a href="/about/" id="5">What is HSI?</a>
@@ -141,8 +143,13 @@
               <img src="/assets/landing_page_bg.jpg" alt="" />
               <div class="top-level">Latinx Alliance</div>
               <ul>
-                <li><a href="/latinx/">Welcome</a></li>
-                <li><a href="#">Campus Conexiones</a></li>
+                <li>
+                  <a href="/latinx/">Welcome</a>
+                </li>
+                <li><a href="/latinx/events.html">Events</a></li>
+                <li>
+                  <a href="/latinx/important-figures.html">Important Figures</a>
+                </li>
                 <li><a href="#">Latinx Heritage Month</a></li>
                 <li><a href="#">RAZA Grad</a></li>
               </ul>
@@ -269,6 +276,14 @@
                 <ul>
                   <li class="current-page-item">
                     <a href="./">Overview</a>
+                    <ul class="children">
+                      <li class="page-item">
+                        <a href="#">Title III</a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#">Title V</a>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <a href="./implementation.html">Implementation</a>
@@ -370,23 +385,21 @@
                       </div>
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Rhoncus aenean vel elit scelerisque mauris. Dictum
-                      varius duis at consectetur lorem. Montes nascetur
-                      ridiculus mus mauris vitae ultricies leo integer. Et
-                      malesuada fames ac turpis egestas integer eget aliquet
-                      nibh. Pellentesque habitant morbi tristique senectus et
-                      netus. Eget egestas purus viverra accumsan. Volutpat ac
-                      tincidunt vitae semper quis lectus nulla at. Sit amet est
-                      placerat in egestas erat imperdiet. Accumsan in nisl nisi
-                      scelerisque eu ultrices vitae. Est sit amet facilisis
-                      magna etiam tempor. Consectetur adipiscing elit
-                      pellentesque habitant. Pellentesque habitant morbi
-                      tristique senectus et netus et. Convallis posuere morbi
-                      leo urna molestie. Dolor magna eget est lorem ipsum dolor
-                      sit amet consectetur. Nisi est sit amet facilisis magna.
-                      Tristique nulla aliquet enim tortor at auctor urna nunc.
+                      In the Fall of 2016, Mesa College was awarded a 5-year, $5
+                      million Title III, HSI STEM Grant. The initative, entitled
+                      "STEM Conexiones" (STEM Connections), supports a number of
+                      instructional and student support practices aimed at
+                      strengthening the college's capacity to support Hispanic
+                      and low-income students. Specifically, the grant aims to
+                      increase student connections in STEM through enhanced
+                      counseling services, workshops, peer mentoring and
+                      outreach, faculty connections through professional
+                      learning and STEM curriculum redesign, and pathway
+                      connections working directly with high schools and adult
+                      learners to prepare them for majoring in STEM. Through
+                      this grant, the college will establish a STEM Cetner and a
+                      STEM Research Incubator for students to bring
+                      undergraduate research projects.
                     </p>
                     <div class="quote quote--image">
                       <div
@@ -415,25 +428,22 @@
                       </div>
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Rhoncus aenean vel elit scelerisque mauris. Dictum
-                      varius duis at consectetur lorem. Montes nascetur
-                      ridiculus mus mauris vitae ultricies leo integer. Et
-                      malesuada fames ac turpis egestas integer eget aliquet
-                      nibh. Pellentesque habitant morbi tristique senectus et
-                      netus. Eget egestas purus viverra accumsan. Volutpat ac
-                      tincidunt vitae semper quis lectus nulla at. Sit amet est
-                      placerat in egestas erat imperdiet. Accumsan in nisl nisi
-                      scelerisque eu ultrices vitae. Est sit amet facilisis
-                      magna etiam tempor. Consectetur adipiscing elit
-                      pellentesque habitant. Pellentesque habitant morbi
-                      tristique senectus et netus et. Convallis posuere morbi
-                      leo urna molestie. Dolor magna eget est lorem ipsum dolor
-                      sit amet consectetur. Nisi est sit amet facilisis magna.
-                      Tristique nulla aliquet enim tortor at auctor urna nunc.
+                      In the Fall of 2014, Mesa College was awarded a
+                      "Developing Hispanic-Serving Institutions - Title V"
+                      five-year grant in the amount of $2.62 million. The
+                      purpose of the grant is to improve the retention and
+                      graduation rates of Mesa's diverse population,
+                      particularly its Latinx students, through systemic,
+                      institutional changes and improvements. Mesa's HSI / Title
+                      V program is entitled "Proyecto Exito", a name that
+                      combines the idea of successfully exiting with a degree,
+                      certificate, or transfer-readiness with the Spanish word
+                      for "success". Mesa will use grants funds to help a higher
+                      proportion of its low-income and Latinx students
+                      experience academic success, allowing them to "exit" Mesa
+                      with their goals met.
                     </p>
-                    <div class="next">
+                    <div class="hidden-sm hidden-xs next">
                       <a
                         href="./implementation.html"
                         class="button button-primary"
@@ -445,20 +455,13 @@
                 <div class="sidebar--mobile">
                   <section>
                     <div class="sidebar-title">
-                      <div>Title Here</div>
+                      <div>Read More</div>
                     </div>
                     <div class="grid col-2">
                       <a href="#">
-                        <div class="teaser teaser--image teaser--sidebar">
+                        <div class="teaser teaser--image teaser--sidebar" style="background-image: url(/assets/landing_page_bg.jpg)">
                           <div class="teaser--image-text">
-                            Image Title Here
-                          </div>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="teaser teaser--image teaser--sidebar">
-                          <div class="teaser--image-text">
-                            Image Title Here
+                            HSI Implementation
                           </div>
                         </div>
                       </a>

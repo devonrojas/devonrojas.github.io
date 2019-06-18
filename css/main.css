@@ -450,7 +450,9 @@ a.active {
 }
 
 .button--arrow-down::before,
-.button--arrow-down::after {
+.button--arrow-down::after,
+.button--arrow-up::after,
+.button--arrow-up::before {
   top: 17px;
 }
 
@@ -851,7 +853,8 @@ h1.hero-text {
 }
 
 .center-link,
-.program-link {
+.program-link,
+.paginate {
   display: inline-block;
   position: relative;
   margin: 0;
@@ -866,15 +869,35 @@ h1.hero-text {
   cursor: pointer;
 }
 
+.paginate {
+  font-size: calc(70%);
+  line-height: 1;
+  background: #fcb424;
+}
+
+.paginate:hover {
+  background: #f7ad18;
+}
+
+.paginate.prev {
+  margin-right: 10px !important;
+  margin-left: 0 !important;
+  padding-right: 0;
+  padding-left: 40px;
+}
+
 .center-link a,
-.program-link a {
+.program-link a,
+.paginate a {
   color: black;
 }
 
 .center-link::after,
 .center-link::before,
 .program-link::after,
-.program-link::before {
+.program-link::before,
+.paginate.next::after,
+.paginate.next::before {
   content: "";
   position: absolute;
   right: 23px;
@@ -884,25 +907,65 @@ h1.hero-text {
   transition: all 0.3s ease-in-out;
 }
 
+.paginate.prev::after,
+.paginate.prev::before {
+  content: "";
+  position: absolute;
+  left: 23px;
+  height: 10px;
+  width: 1px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
 .center-link::after,
-.program-link::after {
+.program-link::after,
+.paginate.next::after,
+.paginate.prev::after {
   bottom: 8.5px;
   transform: rotate(45deg);
   transform-origin: bottom center;
 }
 
+.paginate.next::after,
+.paginate.prev::after {
+  top: 10px;
+}
+
+.paginate.prev::after {
+  transform: rotate(-45deg);
+}
+
 .center-link::before,
-.program-link::before {
+.program-link::before,
+.paginate.next::before,
+.paginate.prev::before {
   top: 8.5px;
   transform: rotate(-45deg);
   transform-origin: top center;
 }
 
+.paginate.prev::before,
+.paginate.next::before {
+  top: 6px;
+}
+
+.paginate.prev::before {
+  transform: rotate(45deg);
+}
+
 .center-link:hover::after,
 .center-link:hover::before,
 .program-link:hover::after,
-.program-link:hover::before {
+.program-link:hover::before,
+.paginate.next:hover::after,
+.paginate.next:hover::before {
   right: 19px;
+}
+
+.paginate.prev:hover::after,
+.paginate.prev:hover::before {
+  left: 19px;
 }
 
 .program .program-title.left {
@@ -1626,6 +1689,193 @@ cite,
 }
 .latinx-header > div > div:nth-child(3) {
   background: #ff9341;
+}
+
+.latinx-events {
+  display: grid;
+  grid-gap: 0 30px;
+  grid-auto-flow: column;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(var(--total), 25%);
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 0 25px;
+}
+
+.latinx-events > * {
+  position: relative;
+  transition: background 0.3s ease-in-out;
+  color: black;
+}
+
+.latinx-events > *:nth-of-type(4n) {
+  border: 2px solid #1f3c7b;
+}
+.latinx-events > *:nth-of-type(4n + 1) {
+  border: 2px solid #fcb424;
+}
+.latinx-events > *:nth-of-type(4n + 2) {
+  border: 2px solid #f37725;
+}
+.latinx-events > *:nth-of-type(4n + 3) {
+  border: 2px solid #699446;
+}
+.latinx-events > *:nth-of-type(4n):hover {
+  background: rgba(31, 60, 123, 0.8);
+}
+.latinx-events > *:nth-of-type(4n + 1):hover {
+  background: rgba(252, 180, 36, 0.8);
+}
+.latinx-events > *:nth-of-type(4n + 2):hover {
+  background: rgba(243, 119, 37, 0.8);
+}
+.latinx-events > *:nth-of-type(4n + 3):hover {
+  background: rgba(105, 148, 70, 0.8);
+}
+
+.latinx-events > * .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 1rem;
+}
+
+.latinx-events > *::before {
+  padding-top: 100%;
+  content: "";
+  display: block;
+}
+
+.latinx-events .event-details {
+  color: black;
+  line-height: 0.9;
+}
+
+.latinx-events .event-details > .day {
+  font-weight: bold;
+  font-size: calc(100% - 0.1vw);
+  text-transform: uppercase;
+}
+
+.latinx-events .event-details > .time,
+.latinx-events .event-details > .local {
+  font-size: calc(100% - 0.2vw);
+}
+
+.latinx-events .event-date {
+  text-align: center;
+  line-height: 1;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  color: white;
+  transform: translate(10px, -10px);
+  padding: 10px;
+  font-size: calc(80%);
+  font-family: "Bitter";
+}
+
+.latinx-events > *:nth-of-type(4n) .event-date {
+  background: #1f3c7b;
+}
+.latinx-events > *:nth-of-type(4n + 1) .event-date {
+  background: #fcb424;
+}
+.latinx-events > *:nth-of-type(4n + 2) .event-date {
+  background: #f37725;
+}
+.latinx-events > *:nth-of-type(4n + 3) .event-date {
+  background: #699446;
+}
+
+.latinx-events span.date-num {
+  font-size: calc(100% + 1vw);
+}
+
+.latinx-events .event-title {
+  font-family: "Bitter";
+  font-weight: bold;
+  font-size: calc(100% + 0.2vw);
+  line-height: 1.1;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.latinx-events .event-subtitle {
+  font-weight: normal;
+  font-size: calc(80%);
+}
+
+.latinx-principles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.latinx-principles > * {
+  text-align: center;
+}
+
+.latinx-principles .principle-title {
+  font-weight: bold;
+  font-size: calc(100% + 1vw);
+  font-family: "Bitter";
+  line-height: 1.6;
+}
+
+.latinx-roster {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem 0;
+  margin: 1rem 0;
+}
+
+.latinx-roster .header {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: calc(100% - 0.1vw);
+  padding-bottom: 1rem;
+  border-bottom: solid 1px black;
+}
+
+.latinx-roster .header,
+.latinx-roster .member {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+.latinx-roster .member a {
+  color: black;
+}
+
+.latinx-roster .member:nth-of-type(4n) a:hover {
+  color: #fcb424;
+}
+.latinx-roster .member:nth-of-type(4n + 1) a:hover {
+  color: #2253a3;
+}
+.latinx-roster .member:nth-of-type(4n + 2) a:hover {
+  color: #ff9341;
+}
+.latinx-roster .member:nth-of-type(4n + 3) a:hover {
+  color: #a4d07e;
 }
 
 .infographic {
