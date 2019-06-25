@@ -3,38 +3,37 @@
 (function() {
   var figureContent = [];
   var filterTags = [];
-
   fetchGoogleSheet()
     .then(function(res) {
       figureContent = res.sort(function(a, b) {
         return nameSort(a, b);
-      });
-      // Initial content display
+      }); // Initial content display
+
       filterContent(filterTags, figureContent);
     })
     .catch(function(err) {
       return console.log(err);
-    });
+    }); // Create checkboxes to toggle filters
 
-  // Create checkboxes to toggle filters
   tags.forEach(function(item) {
     createFilterBtn(item.id, item.tag);
   });
+  document
+    .querySelectorAll("#_filters input[type=checkbox]")
+    .forEach(function(el) {
+      el.addEventListener("change", function(e) {
+        var el = e.target;
+        var label = document.querySelector('label[for="' + el.id + '"]');
 
-  document.querySelectorAll("#_filters input[type=checkbox]").forEach(el => {
-    el.addEventListener("change", function(e) {
-      var el = e.target;
-      var label = document.querySelector('label[for="' + el.id + '"]');
-      if (el.checked) {
-        label.classList.add("active");
-        addFilter(tags, filterTags, el.id, figureContent);
-      } else {
-        removeFilter(filterTags, el.id, figureContent);
-        label.classList.remove("active");
-      }
+        if (el.checked) {
+          label.classList.add("active");
+          addFilter(tags, filterTags, el.id, figureContent);
+        } else {
+          removeFilter(filterTags, el.id, figureContent);
+          label.classList.remove("active");
+        }
+      });
     });
-  });
-
   document
     .querySelector("input.search")
     .addEventListener("keyup", function(event) {
@@ -58,10 +57,10 @@ function searchResults(value, figures) {
       !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
       _iteratorNormalCompletion = true
     ) {
-      var fig = _step.value;
+      var fig = _step.value; // Remove accents to improve search accuracy
 
-      // Remove accents to improve search accuracy
       var name = fig.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
       if (name.toLowerCase().includes(value)) {
         results.push(fig);
       }
@@ -101,18 +100,21 @@ function createFilterBtn(id, tag) {
 
 function addFilter(tags, filterTags, id, figureContent) {
   var exists = false;
+
   for (var i = 0; i < filterTags.length; i++) {
     if (filterTags[i].id === id) {
       exists = true;
       break;
     }
   }
+
   if (!exists) {
     var index = tags.findIndex(function(tag) {
       return tag.id === id;
     });
     filterTags.push(tags[index]);
   }
+
   var search = document.querySelector("input.search").value;
   var results = searchResults(search, figureContent);
   filterContent(filterTags, results);

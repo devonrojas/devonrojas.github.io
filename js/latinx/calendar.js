@@ -1,7 +1,9 @@
 "use strict";
+
 $("#ouCalendarFeedView").append(
   '<ul class="ouCalendarView collapsible" ></ul>'
 );
+
 function normalTime(a) {
   var b = a.split(":");
   return 12 > parseInt(b[0])
@@ -10,6 +12,7 @@ function normalTime(a) {
     ? b[0] + ":" + b[1] + " PM"
     : (b[0] % 12) + ":" + b[1] + " PM";
 }
+
 function getTheFeed(a, b) {
   var c = "",
     d = a.split(",");
@@ -68,12 +71,18 @@ function getTheFeed(a, b) {
           var q =
             "\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<div class=\"collapsible-header row\" style='margin-bottom:0 !important;'>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class='col s2 m1' style='text-align:center;'><i class=\"material-icons\">event</i><span style=\"font-weight:700;\">" +
             l
-              .toLocaleDateString("en-US", { month: "short", day: "2-digit" })
+              .toLocaleDateString("en-US", {
+                month: "short",
+                day: "2-digit"
+              })
               .toUpperCase() +
             "</span></div>\n\t\t\t\t\t\t\t<div class='col s10 m3'>\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<span>" +
             ("12:00 am" ==
             l
-              .toLocaleString("en-US", { hour: "numeric", minute: "numeric" })
+              .toLocaleString("en-US", {
+                hour: "numeric",
+                minute: "numeric"
+              })
               .toLowerCase()
               ? "ALL DAY"
               : normalTime(i.find("start").text()) +
@@ -101,6 +110,7 @@ function getTheFeed(a, b) {
           : $(".ouCalendarView").html(g);
     });
 }
+
 $(document).ready(function() {
   $(".collapsible").collapsible();
 });

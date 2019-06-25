@@ -18,6 +18,7 @@
 
 function buildBio(figure) {
   var categoriesHtml = "";
+
   if (figure.categories) {
     figure.categories.forEach(function(category) {
       var index = tags.findIndex(function(tag) {
@@ -27,10 +28,13 @@ function buildBio(figure) {
         '<span class="figure-category">' + tags[index].tag + "</span>";
     });
   }
+
   var nHtml = '<div id="' + figure.id + '">';
+
   if (figure.photourl) {
     nHtml += '<img src="' + figure.photourl + '" />';
   }
+
   if (figure.exturl) {
     nHtml +=
       '<a class="figure-name" href="' +
@@ -41,6 +45,7 @@ function buildBio(figure) {
   } else {
     nHtml += '<span class="figure-name"><h2>' + figure.name + "</h2></span>";
   }
+
   nHtml +=
     '<div id="categories">' +
     categoriesHtml +
@@ -48,24 +53,26 @@ function buildBio(figure) {
     figure.description +
     "</div>";
   document.getElementById("bio").innerHTML = nHtml;
-}
-
-// Pagination
+} // Pagination
 
 function nextBio(id, max) {
   var next = +id + 1;
+
   if (next >= max) {
     next = 1;
   }
+
   var btn = (document.getElementById("nextBtn").href =
     "/latinx/important-figures-bio.html?id=" + next);
 }
 
 function prevBio(id, max) {
   var prev = +id - 1;
+
   if (prev <= 0) {
     prev = max;
   }
+
   var btn = (document.getElementById("prevBtn").href =
     "/latinx/important-figures-bio.html?id=" + prev);
 }

@@ -177,6 +177,15 @@
     font-size: 16px;
   }
 
+  .latinx-events .event-details > span[class] {
+    font-size: calc(90%);
+    line-height: 1;
+  }
+
+  .latinx-events .event-title {
+    font-size: calc(100%);
+  }
+
   .latinx-header > div > div {
     margin: 0;
     margin-bottom: 0.5rem;
@@ -185,6 +194,15 @@
   .latinx-principles {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+  }
+
+  .latinx-roster {
+    font-size: 14px;
+  }
+
+  .latinx-roster .header,
+  .latinx-roster .member {
+    grid-template-columns: 60px 120px 1fr;
   }
 
   .figures-wrapper {
